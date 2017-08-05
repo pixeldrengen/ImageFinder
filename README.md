@@ -22,4 +22,4 @@ int X = pos.getX();
 int Y = pos.getY();
 `
 
-Im just an amateur who made this for a bot that im working on. Any tips or help regarding optimization or making the code more clean is welcome.
+Please do keep in mind that im just an amateur who made this for a bot that im working on. Any tips or help regarding optimization or making the code more clean is welcome.
