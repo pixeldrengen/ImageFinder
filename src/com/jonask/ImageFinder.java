@@ -45,13 +45,11 @@ public class ImageFinder {
 	}
 	
 	public static Position findImagePos(BufferedImage image, BufferedImage imagetofind) {
-		Position pos;
 		for(int y=0;y<image.getHeight();y++) {
 			for(int x=0;x<image.getWidth();x++) {
 				if(image.getRGB(x, y)==imagetofind.getRGB(0,0)) {
 					
 					int countpixels=imagetofind.getWidth()*imagetofind.getHeight();
-					pos = new Position(x,y);
 					
 					if(!(imagetofind.getHeight()+y>image.getHeight())&&!(imagetofind.getWidth()+x>image.getWidth())) {
 					for(int yy=y;yy<imagetofind.getHeight()+y;yy++) {
@@ -70,7 +68,7 @@ public class ImageFinder {
 						}
 					}
 					if(countpixels==0) {
-						return pos;
+						return new Position(x,y);
 					}
 					}
 				}
