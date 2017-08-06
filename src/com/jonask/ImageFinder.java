@@ -9,7 +9,6 @@ public class ImageFinder {
 	public static boolean findImage(BufferedImage image, BufferedImage imagetofind) {	
 		for(int y=0;y<image.getHeight();y++) {
 			for(int x=0;x<image.getWidth();x++) {
-				System.out.println("BackgroundXY: "+x+":"+y);
 				
 				if(image.getRGB(x, y)==imagetofind.getRGB(0,0)) {
 					
@@ -20,7 +19,6 @@ public class ImageFinder {
 						for(int xx=x;xx<imagetofind.getWidth()+x;xx++) {
 							
 							if(image.getRGB(xx, yy)==imagetofind.getRGB(xx-x,yy-y)) {
-							System.out.println("De er ens");
 							countpixels--;
 							}else {
 								countpixels=-1;
@@ -32,7 +30,6 @@ public class ImageFinder {
 						}
 					}
 					if(countpixels<1) {
-						System.out.println("Fandt billede");
 						return true;
 					}
 					}
@@ -56,7 +53,6 @@ public class ImageFinder {
 						for(int xx=x;xx<imagetofind.getWidth()+x;xx++) {
 							
 							if(image.getRGB(xx, yy)==imagetofind.getRGB(xx-x,yy-y)) {
-							//System.out.println("De er ens");
 							countpixels--;
 							}else {
 								countpixels=-1;
@@ -94,7 +90,6 @@ public class ImageFinder {
 						for(int xx=x;xx<imagetofind.getWidth()+x;xx++) {
 							
 							if(image.getRGB(xx, yy)==imagetofind.getRGB(xx-x,yy-y)) {
-							//System.out.println("De er ens");
 							countpixels--;
 							}else {
 								countpixels=-1;
